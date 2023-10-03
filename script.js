@@ -205,8 +205,9 @@ forward.addEventListener('click', () => {
     wrapper.classList.add('activeInfo');
 });
 
-playerName.addEventListener("click", () => {
-    const inputs = document.getElementById("my-form").elements;
-    console.log(inputs);
-    document.querySelector('body').load( "./game.html");
+playerName.addEventListener("click", (e) => {
+    e.preventDefault();
+    const inputs = document.getElementById("query");
+    console.log(inputs.value);
+    inputs.value = ""
 })
